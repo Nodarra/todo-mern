@@ -1,7 +1,17 @@
 .form {
   justify-content: center !important;
+  margin-top: 30px;
 }
 
-.button {
-  padding: 20px !important;
+form .submit {
+  padding: 8px 20px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+form input {
+  padding: 12px;
+  outline: none;
+  border: 0px;
+  border-radius: 20px;
 }

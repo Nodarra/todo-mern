@@ -4,17 +4,9 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
+import '../Styles/Form.css'
 
 function Form({todos, setTodos, inputText, setInputText}) {  
-  const useStyle = makeStyles({
-    button: {
-      padding: "7px 20px",
-      marginLeft: "2px"
-    }
-  })
-  
-  const classes = useStyle();
-
   const inputHandler = (e) => {
     console.log(e.target.value);
     setInputText(e.target.value);
@@ -32,9 +24,9 @@ function Form({todos, setTodos, inputText, setInputText}) {
   return (
     <div className="form">
       <form>
-        <TextField variant="outlined" size="small" onChange={inputHandler} value={inputText}/>
-        <Button 
-          className={classes.button} 
+        <input onChange={inputHandler} value={inputText}/>
+        <Button
+          className="submit"
           variant="contained" 
           color="primary" 
           type="submit" 

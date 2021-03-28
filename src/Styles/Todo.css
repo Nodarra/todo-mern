@@ -1,0 +1,21 @@
+.todo {
+  background-color: #fff;
+  width: 30vw;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo p {
+  padding: 12px
+}
+
+.checkbox:hover{
+  color: green;
+}
+
+.delete:hover {
+  color: red;
+}

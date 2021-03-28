@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import './Styles/App.css';
 import Typography from '@material-ui/core/Typography';
 import Form from './components/Form';
-import { useState } from 'react';
+import TodoList from './components/TodoList';
 
 function App() {
   const [inputText, setInputText] = useState("");
@@ -16,6 +17,7 @@ function App() {
         inputText={inputText}
         setInputText={setInputText}
       />
+      <TodoList />
     </div>
   );
 }
