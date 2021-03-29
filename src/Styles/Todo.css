@@ -19,3 +19,7 @@
 .delete:hover {
   color: red;
 }
+
+.completed {
+  color: green;
+}

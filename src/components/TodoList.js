@@ -3,13 +3,21 @@ import '../Styles/TodoList.css'
 
 import Todo from './Todo'
 
-function TodoList() {
+function TodoList({todos, setTodos}) {
   return (
     <div className="todo-list">
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
+      {
+        todos.map((todo) => (
+            <Todo 
+              todo = {todo}
+              todos = {todos}
+              setTodos = {setTodos}
+              key = {todo.id}
+              text = {todo.text}
+            />
+          )
+        )
+      }
     </div>
   )
 }

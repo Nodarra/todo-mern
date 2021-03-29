@@ -1,21 +1,18 @@
 import { 
-  TextField,
   Button 
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import '../Styles/Form.css'
 
 function Form({todos, setTodos, inputText, setInputText}) {  
   const inputHandler = (e) => {
-    console.log(e.target.value);
     setInputText(e.target.value);
   }
 
   const submitHandler = (e) =>{
     e.preventDefault();
     setTodos([
-      ...todos, {todo: inputText, completed: false}
+      ...todos, {text: inputText, completed: false, id: Math.random() * 100}
     ])
     setInputText('')
   }
