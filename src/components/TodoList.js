@@ -3,11 +3,11 @@ import '../Styles/TodoList.css'
 
 import Todo from './Todo'
 
-function TodoList({todos, setTodos}) {
-  return (
+function TodoList({todos, setTodos, filterTodos}) {
+  return (        
     <div className="todo-list">
       {
-        todos.map((todo) => (
+        filterTodos.map((todo) => (
             <Todo 
               todo = {todo}
               todos = {todos}

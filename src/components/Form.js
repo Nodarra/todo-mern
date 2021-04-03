@@ -8,7 +8,7 @@ import {
 import React from 'react'
 import '../Styles/Form.css'
 
-function Form({todos, setTodos, inputText, setInputText}) {  
+function Form({todos, setTodos, inputText, setInputText, setStatus}) {  
   const inputHandler = (e) => {
     setInputText(e.target.value);
   }
@@ -21,6 +21,10 @@ function Form({todos, setTodos, inputText, setInputText}) {
       ])
     }
     setInputText('')
+  }
+
+  const statusHandler = (e) => {
+    setStatus(e.target.value)
   }
 
 
@@ -36,10 +40,10 @@ function Form({todos, setTodos, inputText, setInputText}) {
           onClick={submitHandler}
         >Submit</Button>
       </form>
-      <select className="select-todo">
-        <option>All</option>
-        <option>Uncompleted</option>
-        <option>Completed</option>
+      <select className="select-todo" onChange={statusHandler}>
+        <option value="all">All</option>
+        <option value="uncompleted">Uncompleted</option>
+        <option value="completed">Completed</option>
       </select>
     </div>
   )

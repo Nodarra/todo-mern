@@ -40,4 +40,9 @@ form input {
   background-color: #303f9f;
 }
 
+option {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 
