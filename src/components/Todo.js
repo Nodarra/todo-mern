@@ -21,8 +21,8 @@ const Todo = ({text, todo, setTodos, todos}) => {
   }
 
   return (
-    <div className="todo">
-      <IconButton className={`checkbox ${todo.completed ? "completed" : ''}`} onClick={todoComplete}>
+    <div className={`todo ${todo.completed ? "completed" : ''}`}>
+      <IconButton className="checkbox" onClick={todoComplete}>
         <CheckBoxIcon/>
       </IconButton>
       <p>{text}</p>

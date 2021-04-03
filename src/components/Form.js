@@ -1,5 +1,9 @@
 import { 
-  Button 
+  Button,
+  NativeSelect,
+  Select,
+  FormControl,
+  MenuItem 
 } from '@material-ui/core';
 import React from 'react'
 import '../Styles/Form.css'
@@ -11,9 +15,11 @@ function Form({todos, setTodos, inputText, setInputText}) {
 
   const submitHandler = (e) =>{
     e.preventDefault();
-    setTodos([
-      ...todos, {text: inputText, completed: false, id: Math.random() * 100}
-    ])
+    if(inputText != ''){
+      setTodos([
+        ...todos, {text: inputText, completed: false, id: Math.random() * 100}
+      ])
+    }
     setInputText('')
   }
 
@@ -21,7 +27,7 @@ function Form({todos, setTodos, inputText, setInputText}) {
   return (
     <div className="form">
       <form>
-        <input onChange={inputHandler} value={inputText}/>
+        <input onChange={inputHandler} value={inputText} required/>
         <Button
           className="submit"
           variant="contained" 
@@ -30,6 +36,11 @@ function Form({todos, setTodos, inputText, setInputText}) {
           onClick={submitHandler}
         >Submit</Button>
       </form>
+      <select className="select-todo">
+        <option>All</option>
+        <option>Uncompleted</option>
+        <option>Completed</option>
+      </select>
     </div>
   )
 }

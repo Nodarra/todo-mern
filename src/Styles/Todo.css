@@ -6,20 +6,23 @@
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 20%);
 }
 
 .todo p {
-  padding: 12px
-}
-
-.checkbox:hover{
-  color: green;
+  padding: 12px;
+  font-weight: 500;
 }
 
 .delete:hover {
   color: red;
 }
 
-.completed {
-  color: green;
+.completed .checkbox {
+  color: green !important;
+}
+
+.completed p {
+  text-decoration: line-through;
+  color: gray;
 }
